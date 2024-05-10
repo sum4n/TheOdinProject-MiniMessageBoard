@@ -2,10 +2,19 @@
 <html>
   <head>
     <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
   </head>
   <body>
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
+    <hr />
+    <!-- <p><%= messages %></p> -->
+    <% for( let i = 0; i < messages.length; i++ ) { %>
+    <p>
+      <%= messages[i].user %> - <%= messages[i].added %> - <%= messages[i].text
+      %>
+    </p>
+    <hr />
+    <% } %>
   </body>
 </html>
