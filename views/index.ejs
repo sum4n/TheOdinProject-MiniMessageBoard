@@ -6,15 +6,15 @@
   </head>
   <body>
     <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-    <hr />
-    <!-- <p><%= messages %></p> -->
-    <% for( let i = 0; i < messages.length; i++ ) { %>
-    <p>
-      <%= messages[i].user %> - <%= messages[i].added %> - <%= messages[i].text
-      %>
-    </p>
-    <hr />
-    <% } %>
+    <p style="text-decoration: underline">Welcome to <%= title %></p>
+    <ul>
+      <hr />
+      <% for( let i = 0; i < messages.length; i++ ) { %>
+      <li><%= messages[i].user %></li>
+      <li><%= messages[i].added %></li>
+      <li style="font-weight: bold"><%= messages[i].text %></li>
+      <hr />
+      <% } %>
+    </ul>
   </body>
 </html>
