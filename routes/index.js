@@ -22,4 +22,9 @@ router.get("/", function (req, res, next) {
   });
 });
 
+// Get form page
+router.get("/new", function (req, res) {
+  res.render("form");
+});
+
 module.exports = router;
