@@ -6,6 +6,9 @@ const app = express();
 
 app.set("view engine", "ejs");
 
+// Middleware to parse form data into req.body.
+app.use(express.urlencoded({ extended: true }));
+
 app.use("/", indexRouter);
 app.use("/new", formRouter);
 
