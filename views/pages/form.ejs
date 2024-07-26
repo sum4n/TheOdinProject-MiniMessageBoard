@@ -1,0 +1,15 @@
+<%- include('../partials/head') %>
+<h1>Create new message:</h1>
+<form action="/new" method="POST">
+  <label for="message_text">Message:</label>
+  <input
+    type="text"
+    id="message_text"
+    name="message_text"
+    placeholder="Write message"
+    required
+  />
+  <label for="user">Author:</label>
+  <input type="text" name="user" id="user" />
+  <input type="submit" value="Submit" />
+</form>
