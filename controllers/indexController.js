@@ -18,4 +18,4 @@ const getIndexMessages = (req, res) => {
   });
 };
 
-module.exports = { getIndexMessages };
+module.exports = { getIndexMessages, messages };
