@@ -18,4 +18,13 @@ const getIndexMessages = (req, res) => {
   });
 };
 
-module.exports = { getIndexMessages, messages };
+const getSpecificMessage = (req, res) => {
+  res.render("pages/message", {
+    title: "Message",
+    text: req.body.text,
+    user: req.body.user,
+    added: req.body.added,
+  });
+};
+
+module.exports = { getIndexMessages, messages, getSpecificMessage };
