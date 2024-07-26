@@ -6,6 +6,18 @@
   <li>
     <h2><%= message.text %></h2>
     <p><%= message.user %> - <small><%= message.added %></small></p>
+
+    <form action="/open" method="post">
+      <input type="hidden" id="text" name="text" value="<%= message.text  %>" />
+      <input type="hidden" id="user" name="user" value="<%= message.user  %>" />
+      <input
+        type="hidden"
+        id="added"
+        name="added"
+        value="<%= message.added  %>"
+      />
+      <button type="submit">Open</button>
+    </form>
   </li>
   <hr />
   <% }) %>
