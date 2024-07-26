@@ -1,7 +1,12 @@
 <%- include('../partials/head') %>
-<h1>Messages</h1>
-
-<% messages.forEach((message) => { %>
-<p><%= message.text %></p>
-
-<% }) %>
+<h1>Messages:</h1>
+<ul>
+  <hr />
+  <% messages.forEach((message) => { %>
+  <li>
+    <h2><%= message.text %></h2>
+    <p><%= message.user %> - <small><%= message.added %></small></p>
+  </li>
+  <hr />
+  <% }) %>
+</ul>

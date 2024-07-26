@@ -13,7 +13,7 @@ const messages = [
 
 const getIndexMessages = (req, res) => {
   res.render("pages/index", {
-    title: "Messages",
+    title: "Mini Messageboard",
     messages,
   });
 };
