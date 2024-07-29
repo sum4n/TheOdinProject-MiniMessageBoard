@@ -11,7 +11,8 @@ app.set("view engine", "ejs");
 app.use(express.urlencoded({ extended: true }));
 
 // Serve static assets.
-app.use(express.static(path.join(__dirname, "public")));
+// app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static("public"));
 
 app.use("/", indexRouter);
 app.use("/new", formRouter);
