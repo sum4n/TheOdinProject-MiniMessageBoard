@@ -5,6 +5,6 @@ const formRouter = Router();
 
 formRouter.get("/", formController.formGet);
 
-formRouter.post("/", formController.fromPost);
+formRouter.post("/", formController.postMessage);
 
 module.exports = formRouter;
