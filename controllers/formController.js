@@ -1,21 +1,19 @@
+const asyncHandler = require("express-async-handler");
+const db = require("../db/queries");
+
 const formGet = (req, res) => {
   res.render("pages/form", {
     title: "Create new message",
   });
 };
 
-// Import messages;
-const messages = require("./indexController").messages;
+const postMessage = asyncHandler(async (req, res) => {
+  const { message, username } = req.body;
+  // console.log({ message, username });
 
-const fromPost = (req, res) => {
-  const text = req.body.message_text;
-  const user = req.body.user;
+  await db.insertMessage(username, message);
 
-  // Add new message.
-  messages.push({ text, user, added: new Date() });
-
-  // Redirect to index page.
   res.redirect("/");
-};
+});
 
-module.exports = { formGet, fromPost };
+module.exports = { formGet, postMessage };
