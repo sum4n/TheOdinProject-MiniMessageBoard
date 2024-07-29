@@ -1,15 +1,15 @@
 <%- include('../partials/head') %> <%- include('../partials/header') %>
 <h1>Create new message:</h1>
 <form action="/new" method="POST">
-  <label for="message_text">Message:</label>
+  <label for="message">Message:</label>
   <input
     type="text"
-    id="message_text"
-    name="message_text"
+    id="message"
+    name="message"
     placeholder="Write message"
     required
   />
-  <label for="user">Author:</label>
-  <input type="text" name="user" id="user" />
+  <label for="username">Author:</label>
+  <input type="text" name="username" id="username" />
   <input type="submit" value="Submit" />
 </form>
