@@ -5,14 +5,17 @@ const formRouter = require("./routes/formRouter");
 
 const app = express();
 
+// Explicitly set views directory.
+app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 
 // Middleware to parse form data into req.body.
 app.use(express.urlencoded({ extended: true }));
 
 // Serve static assets.
-// app.use(express.static(path.join(__dirname, "public")));
-app.use(express.static("public"));
+// Be explicite
+app.use(express.static(path.join(__dirname, "public")));
+// app.use(express.static("public"));
 
 app.use("/", indexRouter);
 app.use("/new", formRouter);
